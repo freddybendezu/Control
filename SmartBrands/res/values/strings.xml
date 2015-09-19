@@ -23,5 +23,7 @@
     <string name="btnConsultaDetallada">Consulta detallada</string>
     <string name="btnCerrarInventario">Cerrar Inventario</string>
     <string name="cboAlmacenConsulta">Almacen abel</string>
+    <string name="title_activity_actualizar_tablas_maestras">ActualizarTablasMaestras</string>
+    <string name="btnActualizarProducto">Actualizar Producto</string>
 
 </resources>

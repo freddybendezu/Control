@@ -21,9 +21,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity><activity android:name="com.smartbrands.demo.NuevoInventario" android:label="@string/title_activity_nuevo_inventario">
         </activity>
-        
+        <activity
+            android:name="com.smartbrands.demo.NuevoInventario"
+            android:label="@string/title_activity_nuevo_inventario" >
+        </activity>
+        <activity
+            android:name="com.smartbrands.demo.ActualizarTablasMaestras"
+            android:label="@string/title_activity_actualizar_tablas_maestras" >
+        </activity>
     </application>
 
 </manifest>

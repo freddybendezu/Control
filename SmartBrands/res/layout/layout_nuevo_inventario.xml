@@ -113,14 +113,14 @@
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/lblAlmacenConsulta"
+        android:layout_below="@+id/lblAlmacenConsulta"
         android:ems="10"
         android:inputType="none"
         android:textSize="@dimen/tamanoLetra" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnActualizarProducto"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -134,8 +134,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/button1"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_alignTop="@+id/btnActualizarProducto"
+        android:layout_toRightOf="@+id/btnActualizarProducto"
         android:text="@string/btnCerrarInventario"
         android:textSize="@dimen/tamanoLetra" />
 
@@ -170,8 +170,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/btnActualizarProducto"
+        android:layout_below="@+id/btnActualizarProducto"
         android:layout_marginTop="14dp"
         android:text="@string/lblTotalProductos"
         android:textSize="@dimen/tamanoLetra" />
@@ -197,7 +197,7 @@
         android:textSize="@dimen/tamanoLetra" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lblAlmacenConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView2"
