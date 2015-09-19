@@ -3,7 +3,7 @@
 
     <string name="app_name">Smart Brands</string>
     <string name="action_settings">Configuracion</string>
-    <string name="hello_world">Chau Peru</string>
+    <string name="hello_world">Freddy Feo</string>
     <string name="btnNuevoInventario">Nuevo Inventario</string>
     <string name="btnGenerarExcel">Generar Excel</string>
     <string name="btnEnviarDatos">Enviar Datos a Srv x WS</string>
