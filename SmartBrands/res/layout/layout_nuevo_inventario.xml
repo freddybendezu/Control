@@ -110,7 +110,7 @@
         android:textSize="@dimen/tamanoLetra" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/txtProductoConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/lblAlmacenConsulta"
@@ -124,8 +124,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/txtProductoConsulta"
+        android:layout_below="@+id/txtProductoConsulta"
         android:text="@string/btnConsultaDetallada"
         android:textSize="@dimen/tamanoLetra" />
 
@@ -152,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText4"
-        android:layout_toRightOf="@+id/textView3"
+        android:layout_toRightOf="@+id/lblProductoConsulta"
         android:ems="10"
         android:inputType="none"
         android:textSize="@dimen/tamanoLetra" />
@@ -162,12 +162,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/editText4"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignLeft="@+id/lblProductoConsulta"
         android:text="@string/lblCantidadProductos"
         android:textSize="@dimen/tamanoLetra" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/lblProductoConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnActualizarProducto"
@@ -180,14 +180,14 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/lblProductoConsulta"
         android:layout_toLeftOf="@+id/button2"
         android:ems="10"
         android:inputType="none"
         android:textSize="@dimen/tamanoLetra" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lblUbicacionConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnAgregarCantidad"
@@ -200,8 +200,8 @@
         android:id="@+id/lblAlmacenConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/lblUbicacionConsulta"
+        android:layout_alignBottom="@+id/lblUbicacionConsulta"
         android:layout_alignLeft="@+id/chkCantidad"
         android:text="@string/lblUltimoRegistro"
         android:textSize="@dimen/tamanoLetra" />
@@ -210,8 +210,8 @@
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignBaseline="@+id/txtProductoConsulta"
+        android:layout_alignBottom="@+id/txtProductoConsulta"
         android:layout_toRightOf="@+id/txtCantidad"
         android:ems="10"
         android:inputType="none"

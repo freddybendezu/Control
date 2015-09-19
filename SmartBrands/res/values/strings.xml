@@ -25,5 +25,6 @@
     <string name="cboAlmacenConsulta">Almacen abel</string>
     <string name="title_activity_actualizar_tablas_maestras">ActualizarTablasMaestras</string>
     <string name="btnActualizarProducto">Actualizar Producto</string>
+    <string name="title_activity_consulta_detallada">ConsultaDetallada</string>
 
 </resources>
