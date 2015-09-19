@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">Smart Brands</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="hello_world">Hola Peru</string>
     <string name="btnNuevoInventario">Nuevo Inventario</string>
     <string name="btnGenerarExcel">Generar Excel</string>
     <string name="btnEnviarDatos">Enviar Datos a Srv x WS</string>
