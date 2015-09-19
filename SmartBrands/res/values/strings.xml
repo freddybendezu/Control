@@ -22,6 +22,6 @@
     <string name="lblCantidadProductos">Cantidad de productos</string>
     <string name="btnConsultaDetallada">Consulta detallada</string>
     <string name="btnCerrarInventario">Cerrar Inventario</string>
-    <string name="cboAlmacenConsulta">Almacen</string>
+    <string name="cboAlmacenConsulta">Almacen abel</string>
 
 </resources>
