@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Inicio" >
+
+    <Button
+        android:id="@+id/btnNuevoInventario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="lanzar"
+        android:text="@string/btnNuevoInventario" />
+
+    <Button
+        android:id="@+id/btnGenerarExcel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnNuevoInventario"
+        android:layout_below="@+id/btnNuevoInventario"
+        android:text="@string/btnGenerarExcel" />
+
+    <Button
+        android:id="@+id/btnEnviarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnGenerarExcel"
+        android:layout_below="@+id/btnGenerarExcel"
+        android:text="@string/btnEnviarDatos" />
+
+    <Button
+        android:id="@+id/btnActualizarTablas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnEnviarDatos"
+        android:layout_below="@+id/btnEnviarDatos"
+        android:text="@string/btnActualizarTablas" />
+
+    <Button
+        android:id="@+id/btnMenuPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnActualizarTablas"
+        android:layout_centerVertical="true"
+        android:text="@string/btnMenuPrincipal" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Brands</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnNuevoInventario">Nuevo Inventario</string>
+    <string name="btnGenerarExcel">Generar Excel</string>
+    <string name="btnEnviarDatos">Enviar Datos a Srv x WS</string>
+    <string name="btnActualizarTablas">Actualizar Tablas Maestras</string>
+    <string name="btnMenuPrincipal">Menu Principal</string>
+    <string name="title_activity_nuevo_inventario">NuevoInventario</string>
+    <string name="lblAlmacen">Almacén</string>
+    <string name="lblUbicacion">Ubicación</string>
+    <string name="lblProducto">Producto</string>
+    <string name="lblCantidad">Cantidad</string>
+    <string name="btnAgregarCantidad">Agregar</string>
+    <string name="btnReemplazar">Reemplazar</string>
+
+</resources>

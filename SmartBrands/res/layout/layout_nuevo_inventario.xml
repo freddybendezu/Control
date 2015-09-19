@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".NuevoInventario" >
+
+    <TextView
+        android:id="@+id/lblAlmacen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cboAlmacen"
+        android:layout_alignParentTop="true"
+        android:text="@string/lblAlmacen"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="11sp" />
+
+    <CheckBox
+        android:id="@+id/chkUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblUbicacion"
+        android:layout_below="@+id/lblUbicacion" />
+
+    <Spinner
+        android:id="@+id/cboUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chkUbicacion"
+        android:layout_toRightOf="@+id/chkUbicacion" />
+
+    <TextView
+        android:id="@+id/lblProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chkUbicacion"
+        android:layout_below="@+id/cboUbicacion"
+        android:text="@string/lblProducto"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Spinner
+        android:id="@+id/cboProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblProducto"
+        android:layout_below="@+id/lblProducto" />
+
+    <TextView
+        android:id="@+id/lblCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cboProducto"
+        android:layout_below="@+id/cboProducto"
+        android:text="@string/lblCantidad"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/chkCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblCantidad" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cboUbicacion"
+        android:layout_alignTop="@+id/chkCantidad"
+        android:ems="10"
+        android:textSize="8sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cboAlmacen"
+        android:layout_below="@+id/cboAlmacen"
+        android:text="@string/lblUbicacion"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="11sp" />
+
+    <Spinner
+        android:id="@+id/cboAlmacen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblAlmacen2"
+        android:entries="@array/demo" />
+
+    <Button
+        android:id="@+id/btnAgregarCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/txtCantidad"
+        android:layout_alignBottom="@+id/txtCantidad"
+        android:layout_toRightOf="@+id/txtCantidad"
+        android:text="@string/btnAgregarCantidad"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/btnAgregarCantidad"
+        android:layout_alignBottom="@+id/btnAgregarCantidad"
+        android:layout_alignParentRight="true"
+        android:text="@string/btnReemplazar"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chkCantidad"
+        android:layout_below="@+id/chkCantidad"
+        android:text="TextView"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAgregarCantidad"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="TextView"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/editText1"
+        android:ems="10"
+        android:textSize="8sp" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:text="Button"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/button3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:text="TextView"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText4"
+        android:layout_toRightOf="@+id/button1"
+        android:ems="10"
+        android:textSize="8sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText4"
+        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="TextView"
+        android:textSize="11sp" />
+
+</RelativeLayout>
