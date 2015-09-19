@@ -16,5 +16,11 @@
     <string name="lblCantidad">Cantidad</string>
     <string name="btnAgregarCantidad">Agregar</string>
     <string name="btnReemplazar">Reemplazar</string>
+    <string name="lblUltimoRegistro">Ultimo registro</string>
+    <string name="lblTotal">total</string>
+    <string name="lblTotalProductos">Total de productos</string>
+    <string name="lblCantidadProductos">Cantidad de productos</string>
+    <string name="btnConsultaDetallada">Consulta detallada</string>
+    <string name="btnCerrarInventario">Cerrar Inventario</string>
 
 </resources>
