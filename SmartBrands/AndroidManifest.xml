@@ -38,6 +38,10 @@
             android:name="com.smartbrands.demo.ConfigurarWebService"
             android:label="@string/title_activity_configurar_web_service" >
         </activity>
+        <activity
+            android:name="com.smartbrands.demo.InventarioNuevo"
+            android:label="@string/title_activity_inventario_nuevo" >
+        </activity>
     </application>
 
 </manifest>

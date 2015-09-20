@@ -9,7 +9,7 @@
     tools:context=".ConfigurarWebService" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/txtCantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,8 +21,8 @@
         android:id="@+id/lblUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignBottom="@+id/txtCantidad"
+        android:layout_alignLeft="@+id/txtCantidad"
         android:layout_marginBottom="45dp"
         android:text="@string/lblUrl" />
 
@@ -30,9 +30,9 @@
         android:id="@+id/btnGrabarUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/txtCantidad"
+        android:layout_alignRight="@+id/txtCantidad"
+        android:layout_below="@+id/txtCantidad"
         android:layout_marginTop="28dp"
         android:text="@string/btnGrabarUrl" />
 

@@ -29,5 +29,6 @@
     <string name="title_activity_configurar_web_service">ConfigurarWebService</string>
     <string name="lblUrl">URL</string>
     <string name="btnGrabarUrl">Grabar URL</string>
+    <string name="title_activity_inventario_nuevo">InventarioNuevo</string>
 
 </resources>
