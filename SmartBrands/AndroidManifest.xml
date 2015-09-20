@@ -34,6 +34,10 @@
             android:name="com.smartbrands.demo.ConsultaDetallada"
             android:label="@string/title_activity_consulta_detallada" >
         </activity>
+        <activity
+            android:name="com.smartbrands.demo.ConfigurarWebService"
+            android:label="@string/title_activity_configurar_web_service" >
+        </activity>
     </application>
 
 </manifest>
