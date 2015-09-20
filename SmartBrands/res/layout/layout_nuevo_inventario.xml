@@ -90,16 +90,6 @@
         android:textSize="@dimen/tamanoLetra" />
 
     <Button
-        android:id="@+id/btnAgregarCantidad"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/txtCantidad"
-        android:layout_alignBottom="@+id/txtCantidad"
-        android:layout_toRightOf="@+id/txtCantidad"
-        android:text="@string/btnAgregarCantidad"
-        android:textSize="@dimen/tamanoLetra" />
-
-    <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -109,33 +99,13 @@
         android:text="@string/btnReemplazar"
         android:textSize="@dimen/tamanoLetra" />
 
-    <EditText
-        android:id="@+id/txtProductoConsulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblAlmacenConsulta"
-        android:layout_below="@+id/lblAlmacenConsulta"
-        android:ems="10"
-        android:inputType="none"
-        android:textSize="@dimen/tamanoLetra" />
-
     <Button
-        android:id="@+id/btnActualizarProducto"
+        android:id="@+id/btnCerrarInventario"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_alignLeft="@+id/txtProductoConsulta"
-        android:layout_below="@+id/txtProductoConsulta"
-        android:text="@string/btnConsultaDetallada"
-        android:textSize="@dimen/tamanoLetra" />
-
-    <Button
-        android:id="@+id/button3"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignTop="@+id/btnActualizarProducto"
-        android:layout_toRightOf="@+id/btnActualizarProducto"
+        android:layout_alignTop="@+id/btnConsultaDetallada"
+        android:layout_toRightOf="@+id/btnConsultaDetallada"
         android:text="@string/btnCerrarInventario"
         android:textSize="@dimen/tamanoLetra" />
 
@@ -147,74 +117,106 @@
         android:layout_below="@+id/lblAlmacen2"
         android:entries="@array/demo" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
-        android:layout_toRightOf="@+id/lblProductoConsulta"
-        android:ems="10"
-        android:inputType="none"
-        android:textSize="@dimen/tamanoLetra" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText4"
-        android:layout_alignLeft="@+id/lblProductoConsulta"
+        android:layout_alignBottom="@+id/txtCantidadProductos"
+        android:layout_alignLeft="@+id/textView3"
         android:text="@string/lblCantidadProductos"
         android:textSize="@dimen/tamanoLetra" />
 
     <TextView
-        android:id="@+id/lblProductoConsulta"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnActualizarProducto"
-        android:layout_below="@+id/btnActualizarProducto"
+        android:layout_alignLeft="@+id/btnConsultaDetallada"
+        android:layout_below="@+id/btnConsultaDetallada"
         android:layout_marginTop="14dp"
         android:text="@string/lblTotalProductos"
         android:textSize="@dimen/tamanoLetra" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtCantidadProductos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblProductoConsulta"
-        android:layout_toLeftOf="@+id/button2"
+        android:layout_alignLeft="@+id/btnCerrarInventario"
+        android:layout_alignRight="@+id/button2"
+        android:layout_below="@+id/textView3"
         android:ems="10"
         android:inputType="none"
         android:textSize="@dimen/tamanoLetra" />
 
     <TextView
-        android:id="@+id/lblUbicacionConsulta"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnAgregarCantidad"
-        android:layout_below="@+id/btnAgregarCantidad"
-        android:layout_marginTop="14dp"
-        android:text="@string/lblTotal"
-        android:textSize="@dimen/tamanoLetra" />
-
-    <TextView
-        android:id="@+id/lblAlmacenConsulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/lblUbicacionConsulta"
-        android:layout_alignBottom="@+id/lblUbicacionConsulta"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
         android:layout_alignLeft="@+id/chkCantidad"
         android:text="@string/lblUltimoRegistro"
         android:textSize="@dimen/tamanoLetra" />
 
-    <EditText
-        android:id="@+id/editText2"
+    <Button
+        android:id="@+id/btnAgregarCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/lblCantidad"
+        android:layout_toLeftOf="@+id/button2"
+        android:onClick="agregar"
+        android:text="@string/btnAgregarCantidad"
+        android:textSize="@dimen/tamanoLetra" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtProductoConsulta"
-        android:layout_alignBottom="@+id/txtProductoConsulta"
+        android:layout_alignLeft="@+id/btnAgregarCantidad"
+        android:layout_below="@+id/txtCantidad"
+        android:layout_marginTop="23dp"
+        android:text="@string/lblTotal"
+        android:textSize="@dimen/tamanoLetra" />
+
+    <EditText
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
         android:layout_toRightOf="@+id/txtCantidad"
         android:ems="10"
         android:inputType="none"
+        android:textSize="@dimen/tamanoLetra" />
+
+    <EditText
+        android:id="@+id/txtUltimoRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/textView1"
+        android:ems="10"
+        android:inputType="none"
+        android:textSize="@dimen/tamanoLetra" />
+
+    <EditText
+        android:id="@+id/txtTotalProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtCantidadProductos"
+        android:layout_alignLeft="@+id/btnCerrarInventario"
+        android:layout_alignRight="@+id/txtCantidadProductos"
+        android:ems="10"
+        android:inputType="none"
+        android:textSize="@dimen/tamanoLetra" />
+
+    <Button
+        android:id="@+id/btnConsultaDetallada"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/txtUltimoRegistro"
+        android:layout_below="@+id/txtUltimoRegistro"
+        android:layout_marginTop="14dp"
+        android:text="@string/btnConsultaDetallada"
         android:textSize="@dimen/tamanoLetra" />
 
 </RelativeLayout>
