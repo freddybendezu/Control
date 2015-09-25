@@ -18,7 +18,16 @@ public class DBAdapter {
 	public static final String ALM_ID_ALMACEN = "id_almacen";// 0 integer
 	public static final String ALM_NOM_ALMACEN = "nom_almacen";// 1 text(String)
 	public static final String ALM_ID_SUCURSAL = "id_sucursal";// 2 integer
+	
+	public static final String UBI_TABLE = "ubi_table";
+	public static final String UBI_ID_UBICACION = "id_ubicacion";// 0 integer
+	public static final String UBI_NOM_UBICACION = "nom_ubicacion";// 1 text(String)
 
+	public static final String PRO_TABLE = "pro_table";
+	public static final String PRO_ID_PRODUCTO = "id_producto";// 0 integer
+	public static final String PRO_NOM_PRODUCTO = "nom_producto";// 1 text(String)
+
+	
 	private SQLiteDatabase db;
 	private DBHelper dbHelper;
 
@@ -55,13 +64,13 @@ public class DBAdapter {
 		return db.query(table, null, null, null, null, null, ALM_ID_ALMACEN);
 	}
 	
-	public List<String> getAllSimple(String table) {
+	public List<String> getAllSimple(String table, String campo) {
         List<String> almacenList = new ArrayList<String>() ;
-        Cursor cursor = db.query(table, null, null, null, null, null, ALM_ID_ALMACEN);
+        Cursor cursor = db.query(table, null, null, null, null, null, null);
         Integer i=0;
         if (cursor.moveToFirst()) {
             do {
-            	almacenList.add(i,cursor.getString(cursor.getColumnIndex(ALM_NOM_ALMACEN)));
+            	almacenList.add(i,cursor.getString(cursor.getColumnIndex(campo)));
                 i+=1;
             } while (cursor.moveToNext());
         }
@@ -81,18 +90,34 @@ public class DBAdapter {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			String create_sql = "CREATE TABLE IF NOT EXISTS " + ALM_TABLE + "("
+			String crear_table_alm_table = "CREATE TABLE IF NOT EXISTS " + ALM_TABLE + "("
 					+ ALM_ID_ALMACEN + " TEXT PRIMARY KEY," + ALM_NOM_ALMACEN
 					+ " TEXT NOT NULL," + ALM_ID_SUCURSAL + " TEXT NOT NULL"
 					+ ")";
 
-			db.execSQL(create_sql);
-			Log.d(TAG, "Creamos la tabla" + ALM_TABLE);
+			String crear_table_ubi_table = "CREATE TABLE IF NOT EXISTS " + UBI_TABLE + "("
+					+ UBI_ID_UBICACION + " TEXT PRIMARY KEY," + UBI_NOM_UBICACION
+					+ " TEXT NOT NULL"
+					+ ")";
+			
+			String crear_table_pro_table = "CREATE TABLE IF NOT EXISTS " + PRO_TABLE + "("
+					+ PRO_ID_PRODUCTO + " TEXT PRIMARY KEY," + PRO_NOM_PRODUCTO
+					+ " TEXT NOT NULL"
+					+ ")";
+			
+			db.execSQL(crear_table_alm_table);
+			Log.d(TAG, "Se creo la tabla " + ALM_TABLE);
+			db.execSQL(crear_table_ubi_table);
+			Log.d(TAG, "Se creo la tabla " + UBI_TABLE);
+			db.execSQL(crear_table_pro_table);
+			Log.d(TAG, "Se creo la tabla " + PRO_TABLE);
 		}
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 			db.execSQL("DROP TABLE IF EXISTS " + ALM_TABLE);
+			db.execSQL("DROP TABLE IF EXISTS " + UBI_TABLE);
+			db.execSQL("DROP TABLE IF EXISTS " + PRO_TABLE);
 		}
 	}
 }

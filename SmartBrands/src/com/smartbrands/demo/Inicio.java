@@ -18,7 +18,7 @@ public class Inicio extends Activity {
     public void lanzar(View v){
     	Bundle bundle = new Bundle();
     	Intent intent = new Intent();
-    	intent.setClass(Inicio.this, InventarioNuevo.class);
+    	intent.setClass(Inicio.this, NuevoInventario.class);
     	intent.putExtras(bundle);
     	startActivity(intent);
 

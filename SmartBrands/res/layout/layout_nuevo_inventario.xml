@@ -22,7 +22,7 @@
             android:text="@string/lblAlmacen" />
 
         <Spinner
-            android:id="@+id/cboUbicacion"
+            android:id="@+id/cboAlmacenn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content" />
 
         <Spinner
-            android:id="@+id/cboAlmacen"
+            android:id="@+id/cboUbicacionn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -63,7 +63,7 @@
             android:text="@string/lblProducto" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txtProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/txtCantidadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -95,14 +95,14 @@
             android:inputType="number" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnAgregar"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnAgregarCantidad" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnReemplazar"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
             android:text="@string/lblUltimoRegistro" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/txtUltimoRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -141,7 +141,7 @@
             android:text="@string/lblTotal" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/txtTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -155,14 +155,14 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnConsultaDetallada"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnConsultaDetallada" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnCerrarInventario"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
             android:text="@string/lblTotalProductos" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/txtTotalProductos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -201,7 +201,7 @@
             android:text="@string/lblCantidadProductos" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/txtCantidadProductos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

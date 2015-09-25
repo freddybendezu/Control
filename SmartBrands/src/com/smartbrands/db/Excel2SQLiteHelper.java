@@ -21,7 +21,7 @@ import android.util.Log;
 
 public class Excel2SQLiteHelper {
 
-	public static void insertExcelToSqlite(DBAdapter dbAdapter, Sheet sheet) {
+	public static void insertExcelToSqlite1(DBAdapter dbAdapter, Sheet sheet) {
 		for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext();) {
 			Row row = rit.next();
 			ContentValues values = new ContentValues();
@@ -29,6 +29,33 @@ public class Excel2SQLiteHelper {
 			values.put(DBAdapter.ALM_NOM_ALMACEN, row.getCell(1).getStringCellValue());
 			values.put(DBAdapter.ALM_ID_SUCURSAL, row.getCell(2).getStringCellValue());
 			if (dbAdapter.insert(DBAdapter.ALM_TABLE, values) < 0) {
+				Log.e("Error", "Error en adaptador");
+				return; 
+			}
+		}
+	}
+
+	public static void insertExcelToSqlite2(DBAdapter dbAdapter, Sheet sheet) {
+		for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext();) {
+			Row row = rit.next();
+			ContentValues values = new ContentValues();
+			values.put(DBAdapter.UBI_ID_UBICACION, row.getCell(0).getStringCellValue());
+			values.put(DBAdapter.UBI_NOM_UBICACION, row.getCell(1).getStringCellValue());
+			if (dbAdapter.insert(DBAdapter.UBI_TABLE, values) < 0) {
+				Log.e("Error", "Error en adaptador");
+				return; 
+			}
+		}
+	}
+
+	
+	public static void insertExcelToSqlite3(DBAdapter dbAdapter, Sheet sheet) {
+		for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext();) {
+			Row row = rit.next();
+			ContentValues values = new ContentValues();
+			values.put(DBAdapter.PRO_ID_PRODUCTO, row.getCell(0).getStringCellValue());
+			values.put(DBAdapter.PRO_NOM_PRODUCTO, row.getCell(1).getStringCellValue());
+			if (dbAdapter.insert(DBAdapter.PRO_TABLE, values) < 0) {
 				Log.e("Error", "Error en adaptador");
 				return; 
 			}
