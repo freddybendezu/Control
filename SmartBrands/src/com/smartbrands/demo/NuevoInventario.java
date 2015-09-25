@@ -33,7 +33,7 @@ public class NuevoInventario extends Activity {
 	
 	private TextView formatTxt, contentTxt, cantidad;
 	Spinner cboAlmacen, cboUbicacion; 
-	int x = 1;
+	int x = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class NuevoInventario extends Activity {
 		cboUbicacion = (Spinner) findViewById(R.id.cboUbicacionn);
 		formatTxt = (TextView) findViewById(R.id.txtProducto);
 		contentTxt = (TextView) findViewById(R.id.txtUltimoRegistro);
-		cantidad = (TextView) findViewById(R.id.txtCantidad);
+		cantidad = (TextView) findViewById(R.id.txtCantidadd);
 		
 		importExcel2Sqlite();
 	}
@@ -60,33 +60,24 @@ public class NuevoInventario extends Activity {
 			scanIntegrator.initiateScan();
 		
 	}
-	public void seguirAgregando() {
-			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-			scanIntegrator.initiateScan();		
-	}
+
 
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);		
-		if (scanningResult != null) {
-			
-			String scanContent = scanningResult.getContents();
-			
-			String producto = contentTxt.getText().toString().trim();
-			String scanFormat = scanningResult.getFormatName();
-						
-			if (producto.equalsIgnoreCase(scanContent)){
-				x += 1;
-				cantidad.setText(x+"");
-				seguirAgregando();
-			}
+		
+		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+		String scanContent = scanningResult.getContents();
+		String scanFormat = scanningResult.getFormatName();
+		
+		if (scanContent != null) {									
 			contentTxt.setText(scanContent);
 			formatTxt.setText(scanFormat);
-		
+			x += 1;
 		} else {
-			
+			Log.e(TAG, "Se ha producido un error");			
 			Toast toast = Toast.makeText(getApplicationContext(), "No se ha recibido datos del scaneo!", Toast.LENGTH_SHORT);
 			toast.show();
 		}
+		cantidad.setText(x + "");
 
 	}
 	
