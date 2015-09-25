@@ -30,7 +30,7 @@ public class Excel2SQLiteHelper {
 			values.put(DBAdapter.ALM_ID_SUCURSAL, row.getCell(2).getStringCellValue());
 			if (dbAdapter.insert(DBAdapter.ALM_TABLE, values) < 0) {
 				Log.e("Error", "Error en adaptador");
-				return;
+				return; 
 			}
 		}
 	}
@@ -69,7 +69,7 @@ public class Excel2SQLiteHelper {
 		insertRow(sheet2, 4, values9, cellStyle);
 
 		//
-		File file = new File("/sdcard/students.xls");
+		File file = new File("/sdcard/demo.xls");
 		FileOutputStream fos = null;
 		try {
 			if (!file.exists()) {

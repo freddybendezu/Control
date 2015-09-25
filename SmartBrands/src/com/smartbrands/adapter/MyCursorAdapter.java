@@ -1,4 +1,4 @@
-package com.smartbrands.db;
+package com.smartbrands.adapter;
 
 import android.content.Context;
 import android.database.Cursor;

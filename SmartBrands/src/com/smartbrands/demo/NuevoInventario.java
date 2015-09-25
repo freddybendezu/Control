@@ -7,9 +7,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
+import com.smartbrands.adapter.MyCursorAdapter;
 import com.smartbrands.db.DBAdapter;
 import com.smartbrands.db.Excel2SQLiteHelper;
-import com.smartbrands.db.MyCursorAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;

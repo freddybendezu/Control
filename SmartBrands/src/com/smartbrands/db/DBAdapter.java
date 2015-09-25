@@ -46,7 +46,7 @@ public class DBAdapter {
 
 
 	public int insert(String table, ContentValues values) {
-		Log.e(TAG, "Se inserta valores" + values);
+		Log.e(TAG, "Se inserta valores " + values);
 		return (int) db.insert(table, null, values);
 	}
 
@@ -83,7 +83,7 @@ public class DBAdapter {
 		public void onCreate(SQLiteDatabase db) {
 			String create_sql = "CREATE TABLE IF NOT EXISTS " + ALM_TABLE + "("
 					+ ALM_ID_ALMACEN + " TEXT PRIMARY KEY," + ALM_NOM_ALMACEN
-					+ " TEXT NOT NULL," + ALM_ID_SUCURSAL + " TEXT NOT NULL,"
+					+ " TEXT NOT NULL," + ALM_ID_SUCURSAL + " TEXT NOT NULL"
 					+ ")";
 
 			db.execSQL(create_sql);
