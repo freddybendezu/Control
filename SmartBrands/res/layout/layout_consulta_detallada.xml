@@ -1,7 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,49 +14,92 @@
         android:id="@+id/lblUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:text="@string/lblAlmacen" />
 
     <Spinner
         android:id="@+id/cboAlmacenConsulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblUrl"
-        android:layout_below="@+id/lblUrl" />
-
-    <Spinner
-        android:id="@+id/cboUbicacionConsulta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblUbicacionConsulta"
-        android:layout_below="@+id/lblUbicacionConsulta" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/lblUbicacionConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cboAlmacenConsulta"
-        android:layout_below="@+id/cboAlmacenConsulta"
         android:text="@string/lblUbicacion" />
+
+    <Spinner
+        android:id="@+id/cboUbicacionConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/lblProductoConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/cboUbicacionConsulta"
-        android:layout_below="@+id/cboUbicacionConsulta"
         android:text="@string/lblProducto" />
 
-    <EditText
-        android:id="@+id/txtProductoConsulta"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/txtProductoConsulta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/btnBuscar"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lblBuscar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#A90"
+            android:text="Codigo"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:background="#A90"
+            android:text="Producto"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#A90"
+            android:text="Cant." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/lblProductoConsulta"
-        android:layout_below="@+id/lblProductoConsulta"
-        android:ems="10" >
+        android:orientation="vertical" >
 
-        <requestFocus />
-    </EditText>
+        <ListView
+            android:id="@+id/lstConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
 
-</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

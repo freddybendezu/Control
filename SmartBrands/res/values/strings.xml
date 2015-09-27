@@ -30,5 +30,7 @@
     <string name="lblUrl">URL</string>
     <string name="btnGrabarUrl">Grabar URL</string>
     <string name="title_activity_inventario_nuevo">InventarioNuevo</string>
+    <string name="lblBuscar">Buscar</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>

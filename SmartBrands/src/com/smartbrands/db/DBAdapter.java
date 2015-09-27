@@ -15,17 +15,18 @@ public class DBAdapter {
 	String TAG = "DBAdapter";
 
 	public static final String ALM_TABLE = "alm_table";
-	public static final String ALM_ID_ALMACEN = "id_almacen";// 0 integer
-	public static final String ALM_NOM_ALMACEN = "nom_almacen";// 1 text(String)
-	public static final String ALM_ID_SUCURSAL = "id_sucursal";// 2 integer
+	public static final String ALM_ID_ALMACEN = "id_almacen";
+	public static final String ALM_NOM_ALMACEN = "nom_almacen";
+	public static final String ALM_ID_SUCURSAL = "id_sucursal";
 	
 	public static final String UBI_TABLE = "ubi_table";
-	public static final String UBI_ID_UBICACION = "id_ubicacion";// 0 integer
-	public static final String UBI_NOM_UBICACION = "nom_ubicacion";// 1 text(String)
+	public static final String UBI_ID_UBICACION = "id_ubicacion";
+	public static final String UBI_NOM_UBICACION = "nom_ubicacion";
 
 	public static final String PRO_TABLE = "pro_table";
-	public static final String PRO_ID_PRODUCTO = "id_producto";// 0 integer
-	public static final String PRO_NOM_PRODUCTO = "nom_producto";// 1 text(String)
+	public static final String PRO_ID_PRODUCTO = "_id";
+	public static final String PRO_NOM_PRODUCTO = "nom_producto";
+	public static final String PRO_CAN_PRODUCTO = "can_producto";
 
 	
 	private SQLiteDatabase db;
@@ -53,15 +54,20 @@ public class DBAdapter {
 		}
 	}
 
-
 	public int insert(String table, ContentValues values) {
 		Log.e(TAG, "Se inserta valores " + values);
 		return (int) db.insert(table, null, values);
 	}
 
-
 	public Cursor getAllRow(String table) {
-		return db.query(table, null, null, null, null, null, ALM_ID_ALMACEN);
+		String buildSQL = "SELECT * FROM " + table;
+		 
+        Log.d(TAG, "getAllData SQL: " + buildSQL);
+ 
+        return db.rawQuery(buildSQL, null);
+		
+//		Log.e(TAG,"Aqui 50");
+//		return db.query(table, null, null, null, null, null, PRO_ID_PRODUCTO);
 	}
 	
 	public List<String> getAllSimple(String table, String campo) {
@@ -80,6 +86,24 @@ public class DBAdapter {
         return almacenList;
     }
 
+	
+	public int getCantidad(String table, String idProducto){		
+	    String[] campos = {PRO_ID_PRODUCTO, PRO_CAN_PRODUCTO};	 
+	    Log.e(TAG, "Valor de idProducto " + idProducto);	    
+	    Cursor cursor = db.query(table, campos, PRO_ID_PRODUCTO + "=" + idProducto, null, null, null, null, null);	 
+	    if(cursor != null) {
+	        cursor.moveToFirst();
+	    }
+	    Log.e(TAG,"Aqui 8");
+	    int cantidad = cursor.getInt(1);
+	    Log.e(TAG,"Aqui 9");
+	    cursor.close();
+        db.close();
+	    return cantidad;
+	}
+	
+	
+	
 	private class DBHelper extends SQLiteOpenHelper {
 		private static final int VERSION = 1;
 		private static final String DB_NAME = "stu_db.db";
@@ -101,8 +125,8 @@ public class DBAdapter {
 					+ ")";
 			
 			String crear_table_pro_table = "CREATE TABLE IF NOT EXISTS " + PRO_TABLE + "("
-					+ PRO_ID_PRODUCTO + " TEXT PRIMARY KEY," + PRO_NOM_PRODUCTO
-					+ " TEXT NOT NULL"
+					+ PRO_ID_PRODUCTO + " INT PRIMARY KEY," + PRO_NOM_PRODUCTO
+					+ " TEXT NOT NULL," + PRO_CAN_PRODUCTO + " INT NOT NULL"
 					+ ")";
 			
 			db.execSQL(crear_table_alm_table);

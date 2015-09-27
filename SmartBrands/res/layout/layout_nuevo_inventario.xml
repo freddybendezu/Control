@@ -16,7 +16,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/lblCodigoo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblAlmacen" />
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/lblProductoo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblUbicacion" />
@@ -57,7 +57,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/lblCantidadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lblProducto" />
@@ -101,13 +101,6 @@
             android:layout_height="wrap_content"
             android:onClick="agregar"
             android:text="@string/btnAgregarCantidad" />
-
-        <Button
-            android:id="@+id/btnReemplazar"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnReemplazar" />
 
     </LinearLayout>
 
@@ -160,12 +153,13 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="consultaDetallada"
             android:text="@string/btnConsultaDetallada" />
 
         <Button
             android:id="@+id/btnCerrarInventario"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/btnCerrarInventario" />
 

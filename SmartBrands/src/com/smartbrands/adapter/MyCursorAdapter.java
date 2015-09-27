@@ -1,5 +1,7 @@
 package com.smartbrands.adapter;
 
+import com.smartbrands.demo.R;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.view.LayoutInflater;
@@ -9,7 +11,9 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 public class MyCursorAdapter extends CursorAdapter {
+	String TAG = "MainActivity";
 	private LayoutInflater inflater;
+	
 
 	public MyCursorAdapter(Context context, Cursor c) {
 		super(context, c);
@@ -18,19 +22,20 @@ public class MyCursorAdapter extends CursorAdapter {
 
 	@Override
 	public View newView(Context context, Cursor cursor, ViewGroup parent) {
-		return null;
-//		return inflater.inflate(R.layout.layout_listview_item, parent, false);
+		return inflater.inflate(R.layout.layout_listview_producto, parent, false);
 	}
 
 	@Override
 	public void bindView(View view, Context context, Cursor cursor) {
-//		TextView name = (TextView) view.findViewById(R.id.textview_name);
-//		TextView score = (TextView) view.findViewById(R.id.textview_score);
-//		TextView age = (TextView) view.findViewById(R.id.textview_age);
-//		TextView birth = (TextView) view.findViewById(R.id.textview_birth);
-//		name.setText(cursor.getString(1));// name
-//		score.setText(cursor.getString(2));// score
-//		age.setText(cursor.getString(3));// age
-//		birth.setText(cursor.getString(4));// birth
+		TextView codigo = (TextView) view.findViewById(R.id.lblCodigoo);
+		TextView producto = (TextView) view.findViewById(R.id.lblProductoo);
+		TextView cantidad = (TextView) view.findViewById(R.id.lblCantidadd);
+		
+		codigo.setText(cursor.getString(cursor.getColumnIndex(cursor.getColumnName(0))));
+		producto.setText(cursor.getString(cursor.getColumnIndex(cursor.getColumnName(1))));
+		cantidad.setText(cursor.getString(cursor.getColumnIndex(cursor.getColumnName(2))));
+
 	}
+	
 }
+

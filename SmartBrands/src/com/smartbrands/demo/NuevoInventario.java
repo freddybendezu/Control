@@ -31,7 +31,7 @@ public class NuevoInventario extends Activity {
 	String TAG = "NuevoInventario";
 	private Handler handler;
 	
-	private TextView formatTxt, contentTxt, cantidad;
+	private TextView txtProducto, contentTxt, txtCantidad, txtTotal, txtUltimoRegistro;
 	Spinner cboAlmacen, cboUbicacion; 
 	int x = 0;
 
@@ -42,9 +42,11 @@ public class NuevoInventario extends Activity {
 		
 		cboAlmacen = (Spinner) findViewById(R.id.cboAlmacenn);				
 		cboUbicacion = (Spinner) findViewById(R.id.cboUbicacionn);
-		formatTxt = (TextView) findViewById(R.id.txtProducto);
+		txtProducto = (TextView) findViewById(R.id.txtProducto);
 		contentTxt = (TextView) findViewById(R.id.txtUltimoRegistro);
-		cantidad = (TextView) findViewById(R.id.txtCantidadd);
+		txtCantidad = (TextView) findViewById(R.id.txtCantidadd);
+		txtUltimoRegistro = (TextView) findViewById(R.id.txtUltimoRegistro);
+		txtTotal = (TextView) findViewById(R.id.txtTotal);
 		
 		importExcel2Sqlite();
 	}
@@ -57,9 +59,14 @@ public class NuevoInventario extends Activity {
 	
 	public void agregar(View v) {
 			IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-			scanIntegrator.initiateScan();
-		
+			scanIntegrator.initiateScan();	
 	}
+	
+	public void consultaDetallada(View v) {
+		Intent i = new Intent(this, ConsultaDetallada.class );
+        startActivity(i);	
+	}
+
 
 
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -69,15 +76,23 @@ public class NuevoInventario extends Activity {
 		String scanFormat = scanningResult.getFormatName();
 		
 		if (scanContent != null) {									
-			contentTxt.setText(scanContent);
-			formatTxt.setText(scanFormat);
-			x += 1;
+			//contentTxt.setText(scanContent);
+			txtProducto.setText(scanContent);
+			txtUltimoRegistro.setText(scanContent);
+			DBAdapter dbAdapter = new DBAdapter(this);
+	        dbAdapter.open();
+	        x += 1;
+	        int total = dbAdapter.getCantidad(DBAdapter.PRO_TABLE, scanContent);
+	        total +=x; 
+	        
+	        txtTotal.setText(total + "");
+			
 		} else {
 			Log.e(TAG, "Se ha producido un error");			
 			Toast toast = Toast.makeText(getApplicationContext(), "No se ha recibido datos del scaneo!", Toast.LENGTH_SHORT);
 			toast.show();
 		}
-		cantidad.setText(x + "");
+		txtCantidad.setText(x + "");
 
 	}
 	

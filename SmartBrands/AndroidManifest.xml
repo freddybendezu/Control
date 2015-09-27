@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -42,6 +43,10 @@
         <activity
             android:name="com.smartbrands.demo.InventarioNuevo"
             android:label="@string/title_activity_inventario_nuevo" >
+        </activity>
+        <activity
+            android:name="com.smartbrands.adapter.MyCursorAdapter"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

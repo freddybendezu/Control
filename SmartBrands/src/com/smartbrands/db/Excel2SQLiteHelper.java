@@ -53,8 +53,10 @@ public class Excel2SQLiteHelper {
 		for (Iterator<Row> rit = sheet.rowIterator(); rit.hasNext();) {
 			Row row = rit.next();
 			ContentValues values = new ContentValues();
-			values.put(DBAdapter.PRO_ID_PRODUCTO, row.getCell(0).getStringCellValue());
+			values.put(DBAdapter.PRO_ID_PRODUCTO, row.getCell(0).getNumericCellValue());
 			values.put(DBAdapter.PRO_NOM_PRODUCTO, row.getCell(1).getStringCellValue());
+			values.put(DBAdapter.PRO_CAN_PRODUCTO, row.getCell(2).getNumericCellValue());
+			
 			if (dbAdapter.insert(DBAdapter.PRO_TABLE, values) < 0) {
 				Log.e("Error", "Error en adaptador");
 				return; 
